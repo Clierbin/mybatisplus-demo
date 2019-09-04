@@ -29,3 +29,27 @@ build/
 
 ### VS Code ###
 .vscode/
+.mvn/
+mvnw
+mvnw.cmd
+src/test/java/com/pvip/
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.mvn
+.idea
+*.iml
+out
+gen
+wvnw
+wvnw.cmd
+
