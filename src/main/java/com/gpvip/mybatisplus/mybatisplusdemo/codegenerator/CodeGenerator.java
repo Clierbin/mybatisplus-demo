@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
@@ -38,6 +39,8 @@ public class CodeGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         gc.setOutputDir(rb.getString("OutputDir"));
+        // 解决 mp3.1.1+使用了新版jdbc，LocalDateTime等新日期类型处理方式升级，但druid不支持
+        gc.setDateType(DateType.ONLY_DATE);
         gc.setOpen(false);
         gc.setBaseResultMap(true);
         gc.setBaseColumnList(true);
